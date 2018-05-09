@@ -36,8 +36,7 @@ pipeline {
             steps {
              sh '''#!/bin/bash -xe
                    cd /
-                   LD_LIBRARY_PATH=/usr/local/nvidia/lib64
-                   python gpu_tf_check.py && python unitest.py 
+                   python unitest.py 
                        if [ "$?" != "0" ]; then
                           echo "Tensorflow build Failed!!!"
                           exit -1
