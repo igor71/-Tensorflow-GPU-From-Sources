@@ -35,15 +35,13 @@ pipeline {
          stage('Testing Tensorflow Installation') {
             steps {
              sh '''#!/bin/bash -xe
-                   echo 'jenkins' | sudo -S ln -s /usr/local/cuda/lib64/stubs/libcuda.so /usr/local/cuda/lib64/stubs/libcuda.so.1
                    cd /
-                   LD_LIBRARY_PATH=/usr/local/nvidia/lib64:/usr/local/cuda/lib64/stubs
+                   LD_LIBRARY_PATH=/usr/local/nvidia/lib64
                    python gpu_tf_check.py && python unitest.py 
                        if [ "$?" != "0" ]; then
                           echo "Tensorflow build Failed!!!"
                           exit -1
                        fi
-                   echo 'jenkins' | sudo -S rm /usr/local/cuda/lib64/stubs/libcuda.so.1
                  ''' 
             }
     }
