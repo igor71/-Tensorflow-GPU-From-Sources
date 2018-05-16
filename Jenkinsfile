@@ -1,5 +1,5 @@
 pipeline {
-   agent any
+   agent {label 'Tflow-GPU-Python-3.6-srv-20'}
       stages {
          stage('Clone Tensorflow Repository') {
             steps {
