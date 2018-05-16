@@ -1,5 +1,5 @@
 pipeline {
-   agent {label 'Tflow-GPU-Python-3.6'}
+   agent any
       stages {
          stage('Clone Tensorflow Repository') {
             steps {
@@ -48,9 +48,9 @@ pipeline {
             steps {
              sh '''#!/bin/bash -xe
                    export TFLOW=$(cd $WORKSPACE && find -type f -name "tensorflow*.whl" | cut -c 3-)
-                   pv $WORKSPACE/${TFLOW} > /media/common/IT/${TFLOW}
+                   pv $WORKSPACE/${TFLOW} > /media/common/DOCKER_IMAGES/Tensorflow/Current/${TFLOW}
                    cd $WORKSPACE
-                   md5sum /media/common/IT/${TFLOW} > ${TFLOW}.md5
+                   md5sum /media/common/DOCKER_IMAGES/Tensorflow/Current/${TFLOW} > ${TFLOW}.md5
                    md5sum -c ${TFLOW}.md5 
                        if [ "$?" != "0" ]; then
                           echo "SHA1 changed! Security breach? Job Will Be Marked As Failed!!!"
