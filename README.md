@@ -9,7 +9,9 @@ appropriate docker cload template:
 
 Lables: Tflow-GPU-Python-3.6-srv-<server-nuber here>
 
-Docker Image: yi/tflow-build:0.6-python-v.3.6.3 -->> for python 3.6
+Docker Image: 
+
+              yi/tflow-build:0.6-python-v.3.6.3 -->> for python 3.6
 
               yi/tflow-build:0.6 -->> for python 2.7
               
