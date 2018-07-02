@@ -7,7 +7,7 @@ In order to build package for proper python version need to change in jenkins co
 
 appropriate docker cload template:
 
-Lables: Tflow-GPU-Python-3.6-srv-<server-nuber here>
+Lables: Tflow-GPU-Python-3.6-srv-21 or 5, 9 etc
 
 Docker Image: 
 
