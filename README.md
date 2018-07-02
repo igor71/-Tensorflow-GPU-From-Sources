@@ -5,7 +5,7 @@ Tensorflow package can be builded from the sources based on python 2.7 or 3.6
 
 In order to build package for proper python version need to change in jenkins configuration
 
-appropriate docker cload template:
+appropriate docker cloud template:
 
 Lables: Tflow-GPU-Python-3.6-srv-21 or 5, 9 etc
 
