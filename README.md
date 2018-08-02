@@ -38,4 +38,12 @@ Docker Image:
  cd Tensorflow-GPU-From-Sources
  
  /bin/bash tflow-build.sh
+ 
+ pv /whl/tensorflow-1.x.x-cp27-cp27mu-linux_x86_64.whl > /media/common/DOCKER_IMAGES/Tensorflow/Tensorflow-1.x.x-9.0-cudnn7-devel-ubuntu16.04-Server_17.18/tensorflow-1.x.x-cp27-cp27mu-linux_x86_64.whl
+ 
+ pip --no-cache-dir install --upgrade /whl/tensorflow-*.whl
+ 
+ cd /
+ 
+ ipython gpu_tf_check.py
  ```
