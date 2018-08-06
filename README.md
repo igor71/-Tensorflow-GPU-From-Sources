@@ -43,7 +43,7 @@ Docker Image:
  
  TFLOW=$(ls | sort -V | tail -n 1)
  
- pv /whl/$TFLOW > /media/common/DOCKER_IMAGES/Tensorflow/Tensorflow-1.x.x-9.0-cudnn7-devel-ubuntu16.04-Server_17.18/$TFLOW
+ pv /whl/$TFLOW > /media/common/DOCKER_IMAGES/Tensorflow/Current/$TFLOW
  
  pip --no-cache-dir install --upgrade $TFLOW
  
