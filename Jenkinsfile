@@ -4,7 +4,7 @@ pipeline {
          stage('Clone Tensorflow Repository') {
             steps {
              sh '''#!/bin/bash -xe
-             export TF_BRANCH=r1.8
+             export TF_BRANCH=r1.9
              cd /
              echo 'jenkins' | sudo -S git clone --branch=${TF_BRANCH} --depth=1 https://github.com/tensorflow/tensorflow.git
              cd tensorflow
