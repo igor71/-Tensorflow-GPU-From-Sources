@@ -39,9 +39,13 @@ Docker Image:
  
  /bin/bash tflow-build.sh
  
- pv /whl/tensorflow-1.x.x-cp27-cp27mu-linux_x86_64.whl > /media/common/DOCKER_IMAGES/Tensorflow/Tensorflow-1.x.x-9.0-cudnn7-devel-ubuntu16.04-Server_17.18/tensorflow-1.x.x-cp27-cp27mu-linux_x86_64.whl
+ cd /whl
  
- pip --no-cache-dir install --upgrade /whl/tensorflow-*.whl
+ TFLOW=$(ls | sort -V | tail -n 1)
+ 
+ pv /whl/$TFLOW > /media/common/DOCKER_IMAGES/Tensorflow/Tensorflow-1.x.x-9.0-cudnn7-devel-ubuntu16.04-Server_17.18/$TFLOW
+ 
+ pip --no-cache-dir install --upgrade $TFLOW
  
  cd /
  
