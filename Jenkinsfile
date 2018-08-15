@@ -1,10 +1,10 @@
 pipeline {
-   agent {label "${agent_label}" docker "${docker_image_label}"}
+   agent {label "${agent_label}"}
       stages {
          stage('Clone Tensorflow Repository') {
             steps {
              sh '''#!/bin/bash -xe
-             export TF_BRANCH=r1.9
+             export TF_BRANCH="${tf_branch}"
              cd /
              echo 'jenkins' | sudo -S git clone --branch=${TF_BRANCH} --depth=1 https://github.com/tensorflow/tensorflow.git
              cd tensorflow
