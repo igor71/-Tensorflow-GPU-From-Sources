@@ -1,5 +1,5 @@
 pipeline {
-   agent {label ${run_label}}
+   agent {label "${run_label}"}
       stages {
          stage('Clone Tensorflow Repository') {
             steps {
