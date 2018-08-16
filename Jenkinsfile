@@ -1,5 +1,5 @@
 pipeline {
-   agent {label "${agent_label}"}
+   agent {label "${node_label}"}
       stages {
          stage('Import Docker-Build Images') {
             steps {
