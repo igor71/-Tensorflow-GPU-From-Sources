@@ -1,6 +1,29 @@
 pipeline {
    agent {label "${agent_label}"}
       stages {
+         stage('Import Docker-Build Images') {
+            steps {
+             sh '''#!/bin/bash -xe
+             if test ! -z "$(docker images -q yi/tflow-build:0.6-python-v.3.6.3)"; then
+                echo "Docker Image Already Exist!!!"
+             else
+                pv /media/common/DOCKER_IMAGES/TFlow-Build/yi-tflow-build-ssh-0.6-python-v.3.6.3.tar | docker load
+                docker tag 5115755d4d48 yi/tflow-build:0.6-python-v.3.6.3
+                echo "DONE!!!"
+             fi
+             if test ! -z "$(docker images -q yi/tflow-build:0.6)"; then
+                echo "Docker Image Already Exist!!!"
+                  else
+                pv /media/common/DOCKER_IMAGES/TFlow-Build/yi-tflow-build-ssh-0.6.tar | docker load
+                docker tag 0a1860a9598e yi/tflow-build:0.6
+                echo "DONE!!!"
+             fi
+                '''
+            }
+    }
+}
+   agent {label "${agent_label}"}
+      stages {
          stage('Clone Tensorflow Repository') {
             steps {
              sh '''#!/bin/bash -xe
