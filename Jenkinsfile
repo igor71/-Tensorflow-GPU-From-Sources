@@ -22,10 +22,8 @@ pipeline {
                 '''
             }
     }
-}
-      stages {
-	 agent {label "${agent_label}"}
-         stage('Clone Tensorflow Repository') {
+	      stage('Clone Tensorflow Repository') {
+	      agent {label "${agent_label}"}
             steps {
              sh '''#!/bin/bash -xe
              export TF_BRANCH="${tf_branch}"
@@ -49,7 +47,7 @@ pipeline {
             }
     }
          stage('Install Tensorflow Package') {
-            agent {label "${agent_label}"}
+	    agent {label "${agent_label}"}
             steps {
                   sh '''#!/bin/bash -xe
                   mv /home/jenkins/tensorflow-*.whl $WORKSPACE
@@ -59,7 +57,7 @@ pipeline {
             }
      }
          stage('Testing Tensorflow Installation') {
-            agent {label "${agent_label}"}
+	    agent {label "${agent_label}"}
             steps {
              sh '''#!/bin/bash -xe
                    cd /
