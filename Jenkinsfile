@@ -1,6 +1,7 @@
 pipeline {
-   agent {label "${node_label}"}
+   agent none
       stages {
+         agent {label "${node_label}"}
          stage('Import Docker-Build Images') {
             steps {
              sh '''#!/bin/bash -xe
@@ -22,8 +23,8 @@ pipeline {
             }
     }
 }
-   agent {label "${agent_label}"}
       stages {
+         agent {label "${agent_label}"}
          stage('Clone Tensorflow Repository') {
             steps {
              sh '''#!/bin/bash -xe
