@@ -1,8 +1,8 @@
 pipeline {
    agent none
       stages {
-	 agent {label "${node_label}"}
          stage('Import Docker-Build Images') {
+	    agent {label "${node_label}"}
             steps {
              sh '''#!/bin/bash -xe
              if test ! -z "$(docker images -q yi/tflow-build:0.6-python-v.3.6.3)"; then
