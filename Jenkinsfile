@@ -1,7 +1,7 @@
 pipeline {
    agent none
       stages {
-	     agent {label "${node_label}"}
+	 agent {label "${node_label}"}
          stage('Import Docker-Build Images') {
             steps {
              sh '''#!/bin/bash -xe
@@ -24,7 +24,7 @@ pipeline {
     }
 }
       stages {
-	     agent {label "${agent_label}"}
+	 agent {label "${agent_label}"}
          stage('Clone Tensorflow Repository') {
             steps {
              sh '''#!/bin/bash -xe
@@ -38,7 +38,7 @@ pipeline {
             }
     }
          stage('Configure Build ENV & Build TensorFlow Package From Sources') {
-		    agent {label "${agent_label}"}
+	    agent {label "${agent_label}"}
             steps {
              sh '''#!/bin/bash -xe
                    cd /
@@ -49,7 +49,7 @@ pipeline {
             }
     }
          stage('Install Tensorflow Package') {
-		    agent {label "${agent_label}"}
+            agent {label "${agent_label}"}
             steps {
                   sh '''#!/bin/bash -xe
                   mv /home/jenkins/tensorflow-*.whl $WORKSPACE
@@ -59,7 +59,7 @@ pipeline {
             }
      }
          stage('Testing Tensorflow Installation') {
-		    agent {label "${agent_label}"}
+            agent {label "${agent_label}"}
             steps {
              sh '''#!/bin/bash -xe
                    cd /
@@ -72,7 +72,7 @@ pipeline {
             }
     }
          stage('Push Arifact To Network Share') {
-		    agent {label "${agent_label}"}
+	    agent {label "${agent_label}"}
             steps {
              sh '''#!/bin/bash -xe
                    export TFLOW=$(cd $WORKSPACE && find -type f -name "tensorflow*.whl" | cut -c 3-)
@@ -88,7 +88,7 @@ pipeline {
             }
     }
          stage('Cleanup Build Folders') {
-		    agent {label "${agent_label}"}
+	    agent {label "${agent_label}"}
             steps {
              sh '''#!/bin/bash -xe
                    cd $WORKSPACE
