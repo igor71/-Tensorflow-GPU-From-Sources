@@ -11,9 +11,9 @@ Lables: Tflow-GPU-Python-3.6-srv-21 or 5, 9 etc
 
 Docker Image: 
 
-              yi/tflow-build:0.6-python-v.3.6.3 -->> for tflow version 1.6-1.9 & python 3.6
+              yi/tflow-build:0.6-python-v.3.6.3 -->> for tflow version 1.5-1.9 & python 3.6
 
-              yi/tflow-build:0.6 -->> for tflow version 1.6-1.9 & python 2.7
+              yi/tflow-build:0.6 -->> for tflow version 1.5-1.9 & python 2.7
               
               yi/tflow-build:0.7-python-v.3.6.3 -->> for tflow version 1.10 & python 3.6
               
