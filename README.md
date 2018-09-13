@@ -23,7 +23,7 @@ Docker Image:
  
  ### Tensorflow-GPU-From-Sources Manual build steps
  ```
- pv /media/common/DOCKER_IMAGES/TFlow-Build/yi-tflow-build-ssh-0.x-python.tar | docker load
+ pv /media/common/DOCKER_IMAGES/TFlow-Build/yi-tflow-build-ssh-0.x.tar | docker load
  
  pv /media/common/DOCKER_IMAGES/TFlow-Build/yi-tflow-build-ssh-0.x-python-v.3.6.3.tar | docker load
  
