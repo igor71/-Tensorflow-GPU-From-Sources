@@ -20,6 +20,10 @@ Docker Image:
               yi/tflow-build:0.7-python-v.3.6.3 -->> for tflow version 1.10 & python 3.6
               
               yi/tflow-build:0.7 -->> for tflow version 1.10 & python 2.7
+              
+              yi/tflow-build:0.8-python-v.3.6.3 -->> for tflow version 1.11 & python 3.6
+              
+              yi/tflow-build:0.8 -->> for tflow version 1.11 & python 2.7
  
  ### Tensorflow-GPU-From-Sources Manual build steps
  ```
