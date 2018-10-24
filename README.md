@@ -47,6 +47,12 @@ Docker Image:
  
  cd Tensorflow-GPU-From-Sources
  
+ ####### Edit tflow-build.sh for proper tensorflow release version ###############
+ 
+ nano tflow-build.sh
+ 
+ #################################################################################
+ 
  /bin/bash tflow-build.sh
  
  cd /whl
