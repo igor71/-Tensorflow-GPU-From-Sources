@@ -50,19 +50,23 @@ Docker Image:
  
  docker tag <Image ID> yi/tflow-build:0.x
   
- docker tag <Image ID> yi/tflow-build:0.x-python-v.3.6.3
+ docker tag <Image ID> yi/tflow-build:0.x-python-v.3.6
  
  ################# Ubuntu 16.04.X ######################################################################
  
  nvidia-docker run -d -p 37001:22 --name tflow_build -v /media:/media yi/tflow-build:0.x 
  
- nvidia-docker run -d -p 37001:22 --name tflow_build -v /media:/media yi/tflow-build:0.x-python-v.3.6.3
+ nvidia-docker run -d -p 37001:22 --name tflow_build -v /media:/media yi/tflow-build:0.x-python-v.3.6
  
  ################# Ubuntu 18.04.X ######################################################################
  
  docker run --runtime=nvidia -d -p 37001:22 --name tflow_build -v /media:/media yi/tflow-build:1.x-python-v.3.6
  
- docker exec -it tflow_build /bin/bash
+ docker exec -it tflow_build /bin/bash 
+ 
+ Or used preconfigured function yi-dockeradmin
+ 
+ yi-dockeradmin tflow_build 
  
  git clone --branch=master --depth=1 https://github.com/igor71/Tensorflow-GPU-From-Sources
  
