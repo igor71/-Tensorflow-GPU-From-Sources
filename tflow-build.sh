@@ -2,7 +2,7 @@
 
 # Building tensorflow package from the sources manually
 
-TF_BRANCH=r1.8
+TF_BRANCH=r1.X
 
 cd /
 
@@ -16,7 +16,7 @@ updatedb
 
 cd /
 
-cp build_tf_package.sh /tensorflow
+cp auto_build.sh  /tensorflow
 
 cd tensorflow
 
