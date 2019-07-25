@@ -17,9 +17,9 @@ pipeline {
             steps {
              sh '''#!/bin/bash -xe
                    cd /
-                   echo 'jenkins' | sudo -S cp build_tf_package.sh /tensorflow
+                   echo 'jenkins' | sudo -S cp auto_build.sh .tf_configure.bazelrc /tensorflow
                    cd tensorflow
-                   echo 'jenkins' | sudo -S bash build_tf_package.sh 
+                   echo 'jenkins' | sudo -S bash auto_build.sh 
                 '''
             }
     }
