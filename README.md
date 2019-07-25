@@ -11,6 +11,8 @@ Lables: Tflow-GPU-Python-3.6-srv-21 or 5, 9 etc
 
 And make sure docker appropriate docker image exist on desired server
 
+#### Note, In this branch auto_build.sh .tf_configure.bazelrc files will be used for compilation proccess.
+
 Docker Image: 
 
               yi/tflow-build:0.6-python-v.3.6.3 -->> for tflow version 1.5-1.9 & python 3.6
