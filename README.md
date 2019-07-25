@@ -21,9 +21,13 @@ Docker Image:
               
               yi/tflow-build:0.7 -->> for tflow version 1.10 & python 2.7
               
-              yi/tflow-build:0.8-python-v.3.6.3 -->> for tflow version 1.11 - 1.13 & python 3.6
-              
               yi/tflow-build:0.8 -->> for tflow version 1.11 -1.13 & python 2.7
+              
+              yi/tflow-build:0.8.11-python-v.3.6 -->> for tflow version 1.11 & python 3.6.8
+              
+              yi/tflow-build:0.8.12-python-v.3.6 -->> for tflow version 1.12 & python 3.6.8
+              
+              yi/tflow-build:0.8.13-python-v.3.6 -->> for tflow version 1.13 & python 3.6.8
               
               yi/tflow-build:0.9-python-v.3.6 -->> for tflow version 2.0 & Ubuntu 16.04.6 with python 3.6.8
               
