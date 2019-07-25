@@ -66,9 +66,11 @@ Docker Image:
  
  Or used preconfigured function yi-dockeradmin
  
- yi-dockeradmin tflow_build 
+ yi-dockeradmin tflow_build
  
- git clone --branch=master --depth=1 https://github.com/igor71/Tensorflow-GPU-From-Sources
+ ###################### Build TF Package ###################################################
+ 
+ git clone --branch=develop --depth=1 https://github.com/igor71/Tensorflow-GPU-From-Sources
  
  cd Tensorflow-GPU-From-Sources
  
