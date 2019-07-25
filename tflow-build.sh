@@ -16,8 +16,8 @@ updatedb
 
 cd /
 
-cp auto_build.sh  /tensorflow
+cp auto_build.sh .tf_configure.bazelrc  /tensorflow
 
 cd tensorflow
 
-/bin/bash build_tf_package.sh
+/bin/bash auto_build.sh
