@@ -82,7 +82,11 @@ Docker Image:
  
  #################################################################################
  
+ su jenkins
+ 
  /bin/bash tflow-build.sh
+ 
+ exit
  
  cd /whl
  
