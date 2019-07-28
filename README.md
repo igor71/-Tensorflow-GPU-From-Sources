@@ -12,6 +12,7 @@ Lables: Tflow-GPU-Python-3.6-srv-21 or 5, 9 etc
 And make sure docker appropriate docker image exist on desired server
 
 #### Note, In this branch build_tf_package.3.6.sh file will be used for compilation proccess.
+#### When building pacjage with Jenkins Interface, master branch must be used
 
 Docker Image: 
 
