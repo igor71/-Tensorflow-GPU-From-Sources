@@ -84,7 +84,7 @@ Docker Image:
  
  su jenkins
  
- /bin/bash tflow-build.sh
+ /bin/bash auto_build.sh
  
  exit
  
