@@ -37,6 +37,30 @@ sed -i '56,59 s/.*/\/* & \*\//; 61 s/.*/\/* & \*\//' /tensorflow/tensorflow/lite
 sed -n '55,61p' /tensorflow/tensorflow/lite/experimental/ruy/platform.h
 ```
 
+Or change under section i9-7940X in auto_build.sh as following:
+```
+i9-7940X)
+           echo "Building Tensorflow Package For $CPU"
+           WHL_DIR=/whl
+           HOME=/home/jenkins
+           sed -i '56,59 s/.*/\/* & \*\//; 61 s/.*/\/* & \*\//' /tensorflow/tensorflow/lite/experimental/ruy/platform.h
+           sed -n '55,61p' /tensorflow/tensorflow/lite/experimental/ruy/platform.h
+           bazel build --config=opt \
+           --config=cuda \
+           --config=mkl \
+           --config=noaws \
+           --config=nohdfs \
+           --config=noignite \
+           --config=nokafka \
+           --copt=-msse4.1 \
+           --copt="-DEIGEN_USE_VML" \
+           --cxxopt="-D_GLIBCXX_USE_CXX11_ABI=0" \
+            //tensorflow/tools/pip_package:build_pip_package && \
+            mkdir ${WHL_DIR} && \
+            bazel-bin/tensorflow/tools/pip_package/build_pip_package ${WHL_DIR}
+                ;;
+```
+
 References:
 
 https://github.com/tensorflow/tensorflow/issues/32026
