@@ -13,15 +13,10 @@ Relpace lines 55-61 from original file:
 // TODO(b/138433137) Select AVX-512 at runtime rather than via compile options.
 
 #if defined(__AVX512F__) && defined(__AVX512DQ__) && defined(__AVX512CD__) && \
-
     defined(__AVX512BW__) && defined(__AVX512VL__)
-
 #define RUY_DONOTUSEDIRECTLY_AVX512 1
-
 #else
-#
-define RUY_DONOTUSEDIRECTLY_AVX512 0
-
+#define RUY_DONOTUSEDIRECTLY_AVX512 0
 #endif
 ```
 With below code:
@@ -29,13 +24,9 @@ With below code:
 // TODO(b/138433137) Select AVX-512 at runtime rather than via compile options.
 
 /* #if defined(__AVX512F__) && defined(__AVX512DQ__) && defined(__AVX512CD__) && \ */
-
 /*     defined(__AVX512BW__) && defined(__AVX512VL__) */
-
 /* #define RUY_DONOTUSEDIRECTLY_AVX512 1 */
-
 /* #else */
-
 #define RUY_DONOTUSEDIRECTLY_AVX512 0 */
 /* #endif */
 ```
