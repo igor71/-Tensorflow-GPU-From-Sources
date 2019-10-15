@@ -37,7 +37,7 @@ sed -i '56,59 s/.*/\/* & \*\//; 61 s/.*/\/* & \*\//' /tensorflow/tensorflow/lite
 sed -n '55,61p' /tensorflow/tensorflow/lite/experimental/ruy/platform.h
 ```
 
-Or change under section i9-7940X in auto_build.sh as following:
+Or change under section i9-7940X in auto_build.sh before running tflow-build.sh from this repo as following:
 ```
 i9-7940X)
            echo "Building Tensorflow Package For $CPU"
