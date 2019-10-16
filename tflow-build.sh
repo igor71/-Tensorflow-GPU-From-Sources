@@ -1,18 +1,21 @@
 #!/bin/bash
 
-# Building tensorflow package from the sources manually
+### Building tensorflow package from the sources manually
 
 TF_BRANCH=rX.X
 
 cd /
 
-echo 'jenkins' | sudo -S git clone --branch=${TF_BRANCH} --depth=1 https://github.com/tensorflow/tensorflow.git
+SOURCES_DIR=tensorflow
 
-cd tensorflow
+if [ ! -d "$SOURCES_DIR" ]
+   then echo 'jenkins' | sudo -S git clone --branch=${TF_BRANCH} --depth=1 https://github.com/tensorflow/tensorflow.git
+   cd tensorflow
+   echo 'jenkins' | sudo -S git checkout ${TF_BRANCH}
+   echo 'jenkins' | sudo -S updatedb
+fi
 
-echo 'jenkins' | sudo -S git checkout ${TF_BRANCH}
-
-echo 'jenkins' | sudo -S updatedb
+### Auto Build with Jenkins Steps
 
 cd /
 
