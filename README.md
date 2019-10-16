@@ -13,7 +13,7 @@ In order to build package for proper python version need to perform following st
 
 2. Make sure appropriate docker build image exist on desired server.
 
-3. Before running Jenkins job change  `TF_BRANCH=rX.X` in tflow_build.sh for desired tensorflow version, e.g  `TF_BRANCH=r2.0 `
+3. Before running Jenkins job, please change `TF_BRANCH=rX.X` in tflow_build.sh desired TF version, e.g  `TF_BRANCH=r2.0 `
 
 #### Note, In this branch auto_build.sh .tf_configure.bazelrc files will be used for compilation proccess.
 
