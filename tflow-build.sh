@@ -2,7 +2,7 @@
 
 ### Building tensorflow package from the sources manually
 
-TF_BRANCH=rX.X
+TF_BRANCH=r1.14
 
 cd /
 
