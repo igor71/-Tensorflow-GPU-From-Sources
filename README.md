@@ -1,7 +1,7 @@
 ### Tensorflow-GPU-From-Sources as Jenkins Pipline Job
 Build Tesorflow GPU Package From The Sources
 
-Tensorflow package can be builded from the sources based on python 2.7 or 3.6
+Tensorflow package can be build from the sources based on python 2.7 or 3.6
 
 In order to build package for proper python version need to perform following steps:
 
