@@ -6,14 +6,12 @@ Tensorflow package can be build from the sources based on python 2.7 or 3.6
 In order to build package for proper python version need to perform following steps:
 
 1. Change in jenkins configuration appropriate docker cloud template:
-
-   Lables: Tflow-GPU-Python-3.6-srv-21 or 5, 9 etc
-   
-   And chose proper docker image that will be used for build proccess (e.g yi/tflow-build:1.0-python-v.3.6 )
+    `Lables: Tflow-GPU-Python-3.6-srv-21 or 5, 9 etc `
+   And chose proper docker image that will be used for build proccess (e.g `yi/tflow-build:1.0-python-v.3.6 ` )
 
 2. Make sure appropriate docker build image exist on desired server.
 
-3. Before running Jenkins job change TF_BRANCH=rX.X in tflow_build.sh for desired tensorflow version, e.g TF_BRANCH=r2.0
+3. Before running Jenkins job change  `TF_BRANCH=rX.X` in tflow_build.sh for desired tensorflow version, e.g  `TF_BRANCH=r2.0 `
 
 #### Note, In this branch auto_build.sh .tf_configure.bazelrc files will be used for compilation proccess.
 
