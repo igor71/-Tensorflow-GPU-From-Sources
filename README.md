@@ -3,13 +3,17 @@ Build Tesorflow GPU Package From The Sources
 
 Tensorflow package can be builded from the sources based on python 2.7 or 3.6
 
-In order to build package for proper python version need to change in jenkins configuration
+In order to build package for proper python version need to perform following steps:
 
-appropriate docker cloud template:
+1. Change in jenkins configuration appropriate docker cloud template:
 
-Lables: Tflow-GPU-Python-3.6-srv-21 or 5, 9 etc
+   Lables: Tflow-GPU-Python-3.6-srv-21 or 5, 9 etc
+   
+   And chose proper docker image that will be used for build proccess (e.g yi/tflow-build:1.0-python-v.3.6 )
 
-And make sure docker appropriate docker image exist on desired server
+2. Make sure appropriate docker build image exist on desired server.
+
+3. Before running Jenkins job change 
 
 #### Note, In this branch auto_build.sh .tf_configure.bazelrc files will be used for compilation proccess.
 
