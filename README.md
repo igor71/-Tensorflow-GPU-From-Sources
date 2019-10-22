@@ -94,11 +94,11 @@ Docker Image:
  
  cd /whl
  
+ sudo su
+ 
  TFLOW=$(ls | sort -V | tail -n 1)
  
  pv /whl/$TFLOW > /media/common/DOCKER_IMAGES/Tensorflow/Current/$TFLOW
- 
- sudo su
  
  pip --no-cache-dir install --upgrade $TFLOW
  
