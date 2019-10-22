@@ -106,5 +106,7 @@ Docker Image:
  
  python -c "import tensorflow as tf; print(tf.contrib.eager.num_gpus())"
  
+ python -c "import tensorflow as tf; x = [[2.]]; print('tensorflow version', tf.__version__); print('hello, {}'.format(tf.matmul(x, x)))"
+ 
  ipython gpu_tf_check.py
  ```
