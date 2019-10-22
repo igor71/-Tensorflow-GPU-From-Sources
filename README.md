@@ -102,5 +102,7 @@ Docker Image:
  
  cd /
  
+ python -c "import tensorflow as tf; print(tf.__version__)"
+ 
  ipython gpu_tf_check.py
  ```
