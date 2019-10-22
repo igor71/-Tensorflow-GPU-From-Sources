@@ -98,6 +98,8 @@ Docker Image:
  
  pv /whl/$TFLOW > /media/common/DOCKER_IMAGES/Tensorflow/Current/$TFLOW
  
+ sudo su
+ 
  pip --no-cache-dir install --upgrade $TFLOW
  
  cd /
